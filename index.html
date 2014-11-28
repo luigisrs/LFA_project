@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/examples/jumbotron-narrow/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Proyecto 2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Proyecto 2</h3>
+      </div>
+      <h1>Interprete de Instrucciones</h1>
+      <textarea class="form-control" rows="5" id="code"></textarea><br>
+      <button type="button" class="btn btn-lg btn-primary" id="run">Ejecutar</button>
+      <a type="button" class="btn btn-lg btn-danger" id="cleanup">Limpiar</a>
+
+      <div class="row marketing">
+        <div class="col-lg-4 col-sm-4">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th colspan="2">X</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td class="valueCell" id="X0">0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="valueCell" id="X1">0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="valueCell" id="X2">0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="valueCell" id="X3">0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="valueCell" id="X4">0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="valueCell" id="X5">0</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td class="valueCell" id="X6">0</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td class="valueCell" id="X7">0</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td class="valueCell " id="X8">0</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td class="valueCell" id="X9">0</td>
+              </tr>            
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-lg-4 col-sm-4">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th colspan="2">Y</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td class="valueCell" id="Y0">0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="valueCell" id="Y1">0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="valueCell" id="Y2">0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="valueCell" id="Y3">0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="valueCell" id="Y4">0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="valueCell" id="Y5">0</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td class="valueCell" id="Y6">0</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td class="valueCell" id="Y7">0</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td class="valueCell" id="Y8">0</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td class="valueCell" id="Y9">0</td>
+              </tr>            
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-lg-4 col-sm-4">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th colspan="2">Z</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td class="valueCell" id="Z0">0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td class="valueCell" id="Z1">0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="valueCell" id="Z2">0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="valueCell" id="Z3">0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="valueCell" id="Z4">0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="valueCell" id="Z5">0</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td class="valueCell" id="Z6">0</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td class="valueCell" id="Z7">0</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td class="valueCell" id="Z8">0</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td class="valueCell" id="Z9">0</td>
+              </tr>            
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <footer class="footer">
+        <p>Lenguajes Formales y Autómatas</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/app.js"></script>
+  
+
+</body></html>
