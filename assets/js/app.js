@@ -5,22 +5,23 @@
 	//esta variable incluye la referencia etiqueta/lineaEnElTexto. Ejemplo:
 	//labels[2] = 4
 	//La etiqueta C se encuentra en la linea 5 del código
-	var labels = [];
-
-	var str = "A";
-	var n = str.charCodeAt(0) - 6
-	console.log( n );
+	//var labels = [];
 
 //here's where all the hot fuzz happens :D
 $( document ).ready(function() {
-
+	
+	function letterToNumber(label){
+		var n = label.charCodeAt(0)-65;
+		return n;
+	}
+	// Esta función ejecuta instrucciones en las tablas del tipo "X9++"
 	function runInstruction(lineOfText){
 		//get the label
 		var varLoc = lineOfText.slice(0, 2);
 		var varLetter = lineOfText.slice(0, 1);
 		var varPosition = parseInt(lineOfText.slice(1, 2)); //parseInt por que es un string y se convierte a int
 		var varOperator = lineOfText.slice(2, 4);
-		
+
 		switch(varLetter) {
 			case "X":
 				if(varOperator === "++"){
@@ -68,7 +69,6 @@ $( document ).ready(function() {
 			//evaluando si es una etiqueta
 			if(lines[i].slice(1, 2) === ":"){
 				//console.log( 'This string has a TAG' );
-
 			}
 			//else, run this code
 			else{
@@ -87,11 +87,7 @@ $( document ).ready(function() {
 		   Z[i]=0;
 		}
 		$("td").removeClass('success');
-
 	});
-
-	
-
 	
 });
 
