@@ -5,11 +5,13 @@
 	//esta variable incluye la referencia etiqueta/lineaEnElTexto. Ejemplo:
 	//labels[2] = 4
 	//La etiqueta C se encuentra en la linea 5 del código
-	//var labels = [];
+	var labels = [];
+
 
 //here's where all the hot fuzz happens :D
 $( document ).ready(function() {
 	
+	//esta funcion hace algo extraño para que el string "A" sea igual a 1, "B"=2, etc...
 	function letterToNumber(label){
 		var n = label.charCodeAt(0)-65;
 		return n;
@@ -55,6 +57,27 @@ $( document ).ready(function() {
 			break;
 		}		
 	}
+	//esta funcion ejecuta instrucciones con etiquetas
+	function runLabel(lineOfText,lineNumber){
+		//getting label and saving as integer
+		var labelNumber = letterToNumber(lineOfText.slice(0, 1));
+		//asignando al label array
+		labels[labelNumber] = lineNumber;
+		//running instruction
+		runInstruction(lineOfText.slice(2, 6));
+	}
+	//esta funcion ejecuta instrucciones con condicionales
+	function runCondition(lineOfText){
+		//obteniendo variable
+		varLetter = lineOfText.slice(3,4);
+		varPosition = parseInt(lineOfText.slice(4, 5));
+		//evaluando variable
+		
+		//transformando valor GOTO
+
+
+		return //el numero de la linea
+	}
 
 	//obteniendo las lineas del textarea
 	$( "#run" ).click(function() {
@@ -64,11 +87,12 @@ $( document ).ready(function() {
 		for(var i = 0;i < lines.length; i++){
 			//evaluando si es un IF
 			if(lines[i].slice(0, 2) === "IF"){
-				//console.log( 'This string has an IF' );
+				i = runCondition(lines[i]);
 			}
 			//evaluando si es una etiqueta
 			if(lines[i].slice(1, 2) === ":"){
 				//console.log( 'This string has a TAG' );
+				runLabel(lines[i],i);
 			}
 			//else, run this code
 			else{
