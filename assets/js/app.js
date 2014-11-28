@@ -76,10 +76,9 @@ $( document ).ready(function() {
 			}
 		}    	
 	});
-
 	
 	//cleanup button
-	$( "#cleanup" ).click(function() {
+	$("#cleanup").click(function() {
 		$(".valueCell").text("0");
 		for (var i = 0; i < X.length; i++) { 
 		   X[i]=0;
